@@ -3,7 +3,7 @@
 ![screenshot](https://i.imgur.com/47b68Py.png)
 
 ## Credits
-I did not make this script, I've simply updated it to support the latest QBCore. 
+I did not make this script, I've simply updated it to support the latest ![QBCore](https://github.com/qbcore-framework/qb-core). 
 All credits go to Luminos Dev and ![GhzGarage](https://github.com/GhzGarage).
 
 ## For the RGB color to save, you need to make the following changes:
