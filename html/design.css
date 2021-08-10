@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+
+body {
+    background-size: cover;
+    -webkit-user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Teko', sans-serif;
+    display: none; 
+    overflow:hidden;     
+}        
+
+*{
+    transition: 0.5s all;
+}
+
+.container {
+    width:100%; 
+    height:100%; 
+}
+
+.container .column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .row {
+    display: flex;
+    flex-direction: row;
+}
+
+    .container .column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .top-container {
+    /* border: 1px solid blue; */          
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-height:10vh;
+    height:fit-content;
+    align-items:center;
+    justify-content: space-between;
+    max-width:100vw;
+    overflow-x: hidden;
+    padding: 0 10vh;
+}
+
+.container .top-container .top-menu{
+    display:flex;
+    position:relative;   
+    flex-wrap: wrap;
+    letter-spacing: 1px;
+    align-items: flex-end;
+    z-index: 3;
+    max-height: 10vh;
+    align-items: center;
+    margin-top:2em;
+}
+
+.container .top-container a {
+    /* border: 1px solid green; */
+    padding: 0px 15px 0px 0px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 1vw;
+    text-transform: uppercase;
+}
+
+.container .top-container .selected {
+    transition: all 0.5s;
+    padding: 0px 15px 0px 0px;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+}
+
+#messagePopup{
+    display: none;
+    width: fit-content;
+    padding: 10px;
+    font-size: 0.8vw;
+    background-color: rgb(252, 18, 89);
+    color:white;
+    position:absolute;
+    right: 4%;
+    top: 40%;
+    border-radius: 15px;
+}
+
+.container .top-container a:first-child {
+    padding-left: 20px;
+}
+
+.container .top-container .right-container {
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+    padding-right:5vw;
+}
+
+.container .top-container .right-container .header {
+    background-color: rgb(252, 18, 89);
+    padding: 3px 5px;
+    color: white;
+    height: fit-content;
+    margin-right: 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}       
+
+.container .top-container .right-container .column {}
+
+.container .top-container .right-container .row {
+    min-width: 200px;
+    font-size: 16px;
+}
+
+.container .top-container .right-container .row .undercoin{
+    color:white;
+    border-radius: 50%;     
+    padding: 1px 8px;
+    font-size: 15px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 214, 212);
+}
+
+.container .top-container .right-container .row .bitcoin{
+    font-size:20px;
+}
+
+.container .top-container .right-container .row:first-child span:nth-child(3) {
+    font-family: 'Teko', sans-serif;
+    margin-left: 10px;
+}
+
+.container .top-container .right-container .row span:first-child {
+    margin-right: 5px;
+}
+/* .container .top-container .right-container .row span:nth-child(2) {
+    
+} */
+
+.container .top-container .right-container .row:nth-child(2) span:nth-child(3) {
+    color: rgb(0, 214, 212);
+    margin-left: 5px;
+}
+
+.container .top-container .right-container .row:nth-child(2) span:nth-child(4) {
+    color: rgb(0, 214, 212);
+    margin-left: 5px;
+}
+
+.container .middle-left-container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding-left:5vw;
+    padding-top: 5vh;
+}
+
+.container .middle-left-container img {
+    /* border: 1px solid green; */
+    max-width: 130px;
+    height: auto;
+}
+
+.container .middle-left-container .column {
+    padding: 10px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /* justify-content: space-between; */
+    color: white;
+    line-height: 1.8em;
+}
+
+.container .middle-left-container .column #vehicle_brand {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+.container .middle-left-container .column #vehicle_line {
+    padding-top:5px;
+    border-bottom: 2px solid white;
+    margin-bottom:5px;
+    height:auto;
+    width: 100%;
+    min-width:225px;
+}
+
+.container .middle-left-container .column #vehicle_name {
+    font-size: 2em;
+}
+
+.container .middle-left-container .column #vehicle_fabrication {
+    font-family: 'Teko', sans-serif;
+    font-size: 18px;
+}
+
+.container .middle-left-container .column img {
+    max-height: 16px;
+    max-width: 32px;
+}
+
+.container .middle-right-container {
+    /* border: 1px solid green; */
+    position: absolute;
+    transform: translateY(-30%);    
+    color: rgb(204, 197, 191);
+    width: 250px;
+    padding-top: 3vh;
+    padding-right:7vw;
+    right:0px;
+}
+
+.container .middle-right-container .column {
+    padding: 10px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /* justify-content: space-between; */
+    color: white;
+    line-height: 1.8em;
+}
+
+.container .middle-right-container span {
+    font-family: 'Teko', sans-serif;
+    line-height: 1.8em;
+}
+
+.container .middle-right-container .menu-modifications {
+    display:none;
+}
+
+.container .middle-right-container .menu-modifications .option {
+    /* border: 1px solid white; */
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    background: rgba(255,255,255,0.1);
+}
+
+.container .middle-right-container .menu-modifications .option {
+    /* border: 1px solid white; */
+        padding: 5px 15px;
+        margin-bottom: 5px;
+        background: rgba(255,255,255,0.1);
+    }
+
+
+
+
+.container .middle-right-container .menu-modifications .titleContent{
+    font-family: 'Teko', sans-serif;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+.container .middle-right-container .menu-modifications .menuContent{
+    display:none;
+    height: 120px;
+}
+
+.container .middle-right-container .menu-modifications .gpickr{
+    position:relative;
+    margin-right:100px;
+}
+
+.container .middle-left2-container {
+    /* border: 1px solid green; */
+    top: 5%;
+    left: 25px;
+    transform: translateY(-30%);    
+    color: rgb(204, 197, 191);
+    padding-left:5vw;
+    overflow: hidden;
+}
+
+.container .middle-right-container .title {
+    font-family: 'Teko', sans-serif;
+}
+
+
+.container .middle-right-container .spacebetween {
+    justify-content: space-between;
+    margin: 5px 0px 5px 5px;
+}
+
+.container .middle-right-container .spacebetween span:nth-child(2) {
+    font-family: 'Teko', sans-serif;
+    color: white;
+}
+
+.container .middle-right-container .info{
+    height:15px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: right;
+}
+        
+.container .middle-right-container .priceVehicle {
+    width:100%;
+    text-align: right;
+    color:#FC1259;
+    font-size:2em;
+    font-style: italic;
+    font-family: 'Teko', sans-serif;
+}
+
+.container .middle-right-container .bar {
+    border-radius: 15px;
+    height:100%;
+    width:100%;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    right:0;
+}
+
+.container .middle-right-container .bar .percent {
+    border-radius: 15px;
+    height:15px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.container .middle-right-container .bar .data {
+    background: rgba(0,0,0,0.8);
+    color:white;
+    width: 20px;            
+    padding:0 0;
+    text-align: center;
+}
+
+.container .middle-right-container .handling-container {
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.container .middle-right-container .handling-container span {
+    margin: 0px 0px 0px 5px;
+}
+
+.container .middle-right-container .handling-bar-container {
+    position: relative;
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+
+.container .middle-right-container .handling-bar-container .handling-line {
+    height: 2px;
+    width: 100%;
+    background: white;
+}
+
+.container .middle-right-container .handling-bar-container .handling-circle {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    transform: translateY(-50%);
+}
+
+.container .middle-right-container .handling-container .handling-difficulty {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.container .middle-right-container .handling-container .handling-difficulty span:first-child {
+    font-family: 'Teko', sans-serif;
+    color: white;
+}
+
+.container .bottom-container {
+    position: absolute;
+    bottom: 0;
+    height: 67px;
+    width: 100%;
+    background: transparent;
+    z-index: -2;
+}
+
+.container .upper-bottom-container {
+    bottom: 5vh;
+    position: fixed;
+    max-width: 100vw;
+    z-index: 2;
+    /* z-index: 3; */
+    /* border: 1px solid green; */
+    /* margin: 0px 20px 0px 20px; */
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+
+.container .upper-bottom-container .item {
+    width: 250px;
+    height: 170px;
+    background: white;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .upper-bottom-container .item img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .upper-bottom-container .selected {
+    height: 220px;
+    transform: translateY(-50px);
+}
+
+.container .upper-bottom-container .selected .button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .upper-bottom-container .selected .button-container button {
+    font-size: 14px;
+    color: black;
+    background: white;
+    padding: 3px;
+    border: none;
+    font-family: 'Teko', sans-serif;
+}
+
+.container .upper-bottom-container .selected .button-container button:hover,
+.container .upper-bottom-container .selected .button-container button:focus {
+    background: purple;
+    color: white;
+}
+
+.container .top-triangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 22vw 15vh 0;
+    border-color: transparent rgb(252, 18, 89) transparent transparent;
+    z-index: 2;
+}
+
+.container .bottom-triangle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 25vh 0 0 35vw;
+    border-color: transparent transparent transparent rgb(255, 219, 21);
+    z-index: 1;
+}
+
+.container .modal {
+    position:absolute;
+    top:23vh;
+    left:35vw;
+    z-index:0;
+    font-family: 'Teko', sans-serif;  
+    width: 50vh;
+    height: 30vh;
+    max-width: 350px;
+    max-height: 220px !important;
+    border-radius:15px;
+    padding: 2vh 0;
+    background:white;
+    display:none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.container .modal .modal-content{
+    z-index:2;
+    padding:10px 15px;
+    width:90%;
+    height:55%;
+}
+.container .modal .modal-content .title{
+    font-weight: 200;
+    font-size: 1.2em;
+    line-height: 0.5;
+    margin:0;            
+    margin-top:-1px;
+    margin-bottom:10px;
+}
+
+.container .modal .modal-content .vehicle{
+    font-weight: 200;
+    font-size: 0.8em;
+    margin:0;            
+    margin-top:-1px;
+    margin-bottom:10px;
+}
+
+.container .modal .modal-content p{
+    margin:0;
+    font-size: 0.9em;
+}
+
+.container .modal .modal-content .brand, .container .modal .modal-content .model{
+    font-family: 'Teko', sans-serif;
+}
+
+.container .modal .modal-footer{
+    z-index:2;
+    padding:10px 15px;
+    width:90%;
+    height:45%;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.container .modal .modal-footer .modal-price{
+    width:55%;
+}
+.container .modal .modal-footer .modal-price .sale{
+    line-height: 1.3;
+    margin:0;
+    font-size: 3.2vh;
+    font-family: 'Teko', sans-serif;
+}
+.container .modal .modal-footer .modal-price .discount{
+    line-height: 1;
+    margin-top:-10px;
+    margin:0;
+    font-size: 1.8vh;
+    text-decoration: line-through;
+}   
+
+.container .modal .modal-footer .modal-buttons{
+    width:45%;
+    display:flex;            
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .modal .modal-footer .modal-buttons div{
+    display:flex;            
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .modal .modal-footer .modal-buttons button{
+    border: 0px solid;
+    width: 9vh;
+    height: 7vh;
+    max-width: 60px;
+    max-height:45px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.6em;
+    color:white;
+    border-radius:5px;
+    background:black;
+}
+.container .modal .modal-footer .modal-buttons span{            
+    font-size:0.7em;
+}
+
+.container .modal .background-circle{   
+    border-radius:15px 15px 0 0 ;
+    position:absolute;
+    background: rgba(0,0,0,0.4);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 20px;
+    clip-path: ellipse(100% 63% at 27% 0%);    
+    z-index:1;
+}
+
+
+.changeVehicleColor{
+    width:fit-content;
+    display:none;
+    padding-left:5vw;
+    padding-bottom: 3vh;
+}
+
+.changeVehicleColor .picker{
+    margin: 30px 0;
+}
+
+input[type="button"]
+{
+    display:block;
+    border: none !important;
+    outline:none !important;
+}
+
+.changeColorButton{
+    padding: 5px 5px;
+    color:white;
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+}   
+
+
+.theme-container{
+    padding: 5px 15px;
+    margin-bottom: 5px;
+ }
+ 
+ .theme-container button {
+    margin-right: 30px;
+    color:white;
+    text-align: center;
+    background: transparent;
+    font-size: 1em;
+    border:0;
+    font-family: 'Teko', sans-serif;
+}
+
+.theme-container button.active {
+    border-radius: 100px;
+    color: rgb(252, 18, 89);
+    font-size: 1em;
+}
+
+.theme-container h3 {
+    font-weight: 500;
+    color: #36425b;            
+}
+
+.pickr-container {
+    margin-top: 0.5em;
+    
+    overflow: hidden;
+}
+.pcr-app{
+    position: relative;
+    margin:0 0;
+    padding: 0 0;
+    height:auto;
+    overflow: hidden;
+}
+
+.pcr-button{
+    content:'color';    
+    opacity:0.0;
+}
+
+
+
+.carousel-cars{
+    display:flex;
+    flex-direction: row;
+    overflow-x: hidden; 
+    overflow-y: hidden;    
+    height:fit-content;
+    align-items: center;    
+    border-radius: 15px;
+}
+
+.item-cars{
+    display:flex;    
+    margin-right:10px;
+    margin-left:5px;
+    transition: all 0.5s;    
+    border-radius: 15px;
+    width:265px;
+    height:164px;
+}
+
+.item-cars:hover{
+    transform: scale(1.1);    
+    margin-top: 1vh;
+    margin-right:2vh;
+    margin-left:2vh;
+    margin-bottom:1vh;
+    transition: all 0.5s;
+    border-radius: 15px;
+}
+
+.sold-out-text{
+     color: rgb(252, 18, 89);
+     font-family: 'Teko', sans-serif !important;
+     font-size: 1em;
+     width: 100%;
+     text-align: center;
+     font-weight: 800;
+     margin-top: 30px;
+     
+}
+
+.selectedVehicle{
+    padding: 0.5vh;
+    background: rgb(255,109,58);
+    background: linear-gradient(90deg, rgba(255,109,58,1) 0%, rgba(255,160,34,1) 74%, rgba(255,109,58,1) 99%);
+    transform: scale(1.1);    
+    margin-top: 1vh;
+    margin-right:2vh;
+    margin-left:2vh;
+    margin-bottom:1vh;
+}
+
+
+
+.soldOut{
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    background: rgba(255,0,0,0.2);
+    width:265px;
+    height:165px;    
+    letter-spacing: 2px;
+    border-radius: 15px;
+}
+
+
+.disable{
+    transform: scale(1.0);
+}
+
+#vehiclebrand{
+    width:10vh;    
+    height:10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vehiclebrand img{
+    width:7vh;
+
+    max-height: 65px;
+    max-width: 65px;
+    
+}
+
+#actionButton{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.mg-tp-30{
+    margin-top:50px;
+}
+
+.buyButton, .tdButtton{
+    margin-top:2vh;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    font-family: 'Teko', sans-serif !important;
+    color:white;
+    border: 1px solid rgba(0,0,0,0);    
+    border-radius: 100px;
+}
+
+.buyButton:hover, .tdButtton:hover{
+    border-radius: 100px;
+    padding: 5px 10px;
+    color:white;
+    border: 1px solid #FC1259;
+}
+
+.img-fluid{
+    width:328px;
+    height:168px;
+    background: black;
+    background-image: url('../imgs/328px-Adder.png');
+    background-size: 130%;
+    background-position: center;
+    border-radius: 18px;
+}
+
+.exibeName{
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 0.8em;
+    color: rgba(255,255,255, 0.5);
+}
+
+.button-change{
+    display:none;
+    padding: 1vh 2vh;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    color:white;
+    width: fit-content;
+}
+
+.content-carousel .left{
+    position:absolute;
+    left: 10px;
+    top: 8vh;
+    z-index: 3;
+}
+
+.content-carousel .right{
+    position:absolute;
+    right: 10px;
+    top: 8vh;
+    z-index: 3;
+}
+
+.money{
+    color:white;
+}
+
+.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto
+{
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.w-100{width:100%!important}
