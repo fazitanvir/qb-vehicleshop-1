@@ -2,9 +2,13 @@
 
 ![screenshot](https://i.imgur.com/47b68Py.png)
 
-### For the RGB color to work you need to make some changes:
+## Credits
+I did not make this script, I've simply updated it to support the latest QBCore. 
+All credits go to Luminos Dev and ![GhzGarage](https://github.com/GhzGarage).
 
-Replace ```QBCore.Functions.GetVehicleProperties``` from ```qb-core/client/functions.lua``` with:
+## For the RGB color to save, you need to make the following changes:
+
+### Replace ```QBCore.Functions.GetVehicleProperties``` from ```qb-core/client/functions.lua``` with:
 ```lua
 QBCore.Functions.GetVehicleProperties = function(vehicle)
 	if DoesEntityExist(vehicle) then		
@@ -119,7 +123,8 @@ QBCore.Functions.GetVehicleProperties = function(vehicle)
 	end
 end
 ```
-Replace ```QBCore.Functions.SetVehicleProperties``` from ```qb-core/client/functions.lua``` with:
+
+### Replace ```QBCore.Functions.SetVehicleProperties``` from ```qb-core/client/functions.lua``` with:
 ```lua
 QBCore.Functions.SetVehicleProperties = function(vehicle, props)
 	if DoesEntityExist(vehicle) then
