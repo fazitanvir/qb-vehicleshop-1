@@ -19,4 +19,4 @@ CREATE TABLE IF NOT EXISTS `player_vehicles` (
   KEY `plate` (`plate`),
   KEY `citizenid` (`citizenid`),
   KEY `license` (`license`)
-) ENGINE=InnoDB AUTO_INCREMENT=2432 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1;
